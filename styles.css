@@ -1,0 +1,219 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #8EC5FC 0%, #E0C3FC 100%);
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #cccccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #fff;
+    background-color: #565656;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Hero Section (Funny Einstein Image) */
+.hero {
+    background-color: #f6d4b6;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero img {
+    max-width: 300px; /* Larger for the funny Einstein image */
+    border-radius: 10px;
+}
+
+.hero h1 {
+    color: red;
+    font-size: 24px;
+}
+
+/* Section Styling */
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+/* Grid Layout for Sections */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Papers, Blogs, and Image Collection Styling */
+.paper, .blog, .image {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Fixing image size and ensuring no distortion */
+.paper img, .blog img, .image img {
+    width: 100%;
+    height: 200px; /* Fixed height for all images */
+    object-fit: contain; /* Makes sure images maintain aspect ratio without stretching */
+    border-radius: 5px;
+}
+
+/* Papers Section */
+.papers-section {
+    background-color: #d7f2f0;
+    padding: 20px;
+}
+
+/* Taller paper containers */
+.paper {
+    height: 350px; /* Set a taller height for paper containers */
+}
+
+/* About Section */
+.about-section {
+    background-color: #e0ecf9;
+}
+
+/* Hobbies Section */
+.hobbies-section {
+    background-color: #e0f7d1;
+}
+
+/* Blog Section */
+.blog-section {
+    background-color: #e5e5f5;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: #f4eecb;
+}
+
+.image img {
+    width: 100%;
+    height: 200px; /* Ensure uniform height */
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(90deg, #E0C3FC 0%, #8EC5FC 100%);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    border-top: 2px solid #cccccc;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* ----- MEDIA QUERIES FOR MOBILE RESPONSIVENESS ----- */
+
+/* For screens smaller than 768px (commonly phones/tablets) */
+@media screen and (max-width: 768px) {
+
+    /* Adjust header padding and reduce font size */
+    header {
+        padding: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-list a {
+        padding: 8px 10px;
+        font-size: 16px; /* Reduce text size */
+    }
+
+    /* Adjust hero section (Funny Einstein image) */
+    .hero {
+        padding: 10px;
+    }
+
+    .hero img {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    /* Reduce padding for sections */
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    /* Stack grid items vertically on small screens */
+    .grid {
+        grid-template-columns: 1fr; /* Full width for all items */
+    }
+
+    /* Ensure consistent paper container size */
+    .paper {
+        height: auto;
+    }
+
+    /* Adjust font size for sections */
+    section h2 {
+        font-size: 20px;
+    }
+
+    section p, section ul {
+        font-size: 16px; /* Slightly smaller text for readability */
+    }
+
+    /* Adjust footer padding */
+    .footer {
+        padding: 10px;
+        font-size: 14px; /* Smaller font in the footer */
+    }
+}
+
